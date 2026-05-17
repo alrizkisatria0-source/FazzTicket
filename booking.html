@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Booking Tiket — FazTicket</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!--navbar-->
+<nav class="navbar">
+  <div class="container">
+    <a href="index.html" class="logo">
+      <span class="logo-icon"><i class="bi bi-triangle-half"></i></span>
+      FazTicket</a>
+    <button id="navToggle" class="nav-toggle" aria-label="Menu">
+      <i class="bi bi-list"></i>
+    </button>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Beranda</a></li>
+      <li><a href="index.html#gunung">Info Gunung</a></li>
+      <li><a href="index.html#cuaca">Cuaca</a></li>
+      <li><a href="index.html#statistik">Statistik</a></li>
+      <li><a href="booking.html" class="active">Booking</a></li>
+      <li><a href="contact.html">Kontak</a></li>
+    </ul>
+
+  </div>
+</nav>
+
+<div style="
+  background: var(--bluee);
+  padding: 100px 0 52px;
+  text-align: center;
+  color: #fff;">
+  <div class="container">
+    <i class="bi bi-ticket-perforated-fill" style="font-size:2.4rem; color:#7ab8ff; display:block; margin-bottom:12px;"></i>
+    <h1 style="font-size:2rem; font-weight:800; margin-bottom:8px;">Pesan Tiket Pendakian</h1>
+    <p style="opacity:.72; font-size:.95rem;">
+      Isi formulir di bawah — kami akan konfirmasi langsung via WhatsApp kamu
+    </p>
+  </div>
+</div>
+
+<!--booking form-->
+<section class="section">
+  <div class="container">
+    <div class="booking-wrap">
+      <div class="booking-card reveal">
+        <div class="booking-head">
+          <h2><i class="bi bi-mountain"></i> Formulir Booking</h2>
+          <p>Pastikan semua data diisi dengan benar sebelum mengirim</p>
+        </div>
+
+        <div class="booking-body">
+          <form id="bookingForm" novalidate>
+
+            <div class="form-group">
+              <label for="name">
+                <i class="bi bi-person"></i> Nama Lengkap
+              </label>
+              <input
+                type="text"
+                id="name"
+                placeholder="Contoh: Satria Mahadika"
+                required/>
+            </div>
+
+            <div class="form-group">
+              <label for="phone">
+                <i class="bi bi-whatsapp"></i> Nomor WhatsApp
+              </label>
+              <input
+                type="tel"
+                id="phone"
+                placeholder="Contoh: 085751787232"
+                required/>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="mountain">
+                  <i class="bi bi-geo-alt"></i> Pilih Gunung
+                </label>
+                <select id="mountain" required>
+                  <option value="">-- Pilih --</option>
+                  <option value="Penanggungan">Penanggungan (1.653 mdpl)</option>
+                  <option value="Arjuno">Arjuno (3.339 mdpl)</option>
+                  <option value="Welirang">Welirang (3.156 mdpl)</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="date">
+                  <i class="bi bi-calendar3"></i> Tanggal Pendakian
+                </label>
+                <input
+                  type="date"
+                  id="date"
+                  required/>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="climbers">
+                <i class="bi bi-people"></i> Jumlah Pendaki
+              </label>
+              <input
+                type="number"
+                id="climbers"
+                min="3"
+                max="10"
+                value="3"
+                required/>
+            </div>
+
+            <div style="
+              background: var(--sky);
+              border: 1px solid var(--border);
+              border-radius: 9px;
+              padding: 14px 16px;
+              font-size: .85rem;
+              color: var(--muted);
+              margin-bottom: 20px;
+              display: flex;
+              align-items: flex-start;
+              gap: 10px;">
+              <i class="bi bi-info-circle-fill" style="color:var(--blue); margin-top:2px; flex-shrink:0;"></i>
+              <span>
+                Setelah klik <strong>Kirim via WhatsApp</strong>, kamu akan diarahkan ke
+                WhatsApp dengan pesan pemesanan yang sudah terisi otomatis.
+                Tim kami akan membalas dalam 1×24 jam.
+              </span>
+            </div>
+
+            <button type="submit" class="btn btn-book">
+              <i class="bi bi-whatsapp"></i> Kirim via WhatsApp
+            </button>
+          </form>
+        </div>
+      </div>
+
+
+      <div style="
+        margin-top: 28px;
+        background: #fff;
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        padding: 24px 26px;
+        box-shadow: var(--shadow);
+      " class="reveal">
+
+        <h4 style="color:var(--blue); font-size:1rem; margin-bottom:16px;">
+          <i class="bi bi-lightbulb-fill" style="color:#000000;"></i>
+          Tips Sebelum Mendaki
+        </h4>
+        <!--tips-->
+        <ul style="list-style:none; display:flex; flex-direction:column; gap:10px;">
+          <li style="display:flex; gap:10px; align-items:flex-start; font-size:.88rem; color:var(--muted);">
+            <i class="bi bi-check-circle-fill" style="color:var(--blue); margin-top:2px; flex-shrink:0;"></i>
+            Cek kondisi cuaca sebelum keberangkatan
+          </li>
+          <li style="display:flex; gap:10px; align-items:flex-start; font-size:.88rem; color:var(--muted);">
+            <i class="bi bi-check-circle-fill" style="color:var(--blue); margin-top:2px; flex-shrink:0;"></i>
+            Bawa perlengkapan standar: jaket, tenda, sleeping bag, dan P3K
+          </li>
+          <li style="display:flex; gap:10px; align-items:flex-start; font-size:.88rem; color:var(--muted);">
+            <i class="bi bi-check-circle-fill" style="color:var(--blue); margin-top:2px; flex-shrink:0;"></i>
+            Jangan mendaki sendirian — minimal berdua
+          </li>
+          <li style="display:flex; gap:10px; align-items:flex-start; font-size:.88rem; color:var(--muted);">
+            <i class="bi bi-check-circle-fill" style="color:var(--blue); margin-top:2px; flex-shrink:0;"></i>
+            Bawa kembali sampahmu — jaga kebersihan gunung 
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+
+      <div>
+        <div class="footer-brand">
+          <span class="logo-icon"><i class="bi bi-triangle-half"></i></span>
+          FazTicket
+        </div>
+        <p class="footer-about">
+          Platform pemesanan tiket pendakian gunung di Mojokerto, Jawa Timur.
+          Mudah, cepat, dan terpercaya.</p>
+        <div class="footer-socials">
+          <a href="https://instagram.com/arcstriaa" title="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="#" title="TikTok"><i class="bi bi-tiktok"></i></a>
+          <a href="#" title="YouTube"><i class="bi bi-youtube"></i></a>
+          <a href="https://wa.me/6285751787232" target="_blank" title="WhatsApp">
+            <i class="bi bi-whatsapp"></i>
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <h5>Navigasi</h5>
+        <ul class="footer-links">
+          <li><a href="index.html">Beranda</a></li>
+          <li><a href="index.html#gunung">Info Gunung</a></li>
+          <li><a href="index.html#cuaca">Cuaca</a></li>
+          <li><a href="index.html#statistik">Statistik</a></li>
+          <li><a href="booking.html">Booking Tiket</a></li>
+          <li><a href="contact.html">Kontak</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h5>Kontak</h5>
+        <ul class="footer-links">
+          <li>
+            <a href="https://wa.me/6285751787232" target="_blank">
+              <i class="bi bi-whatsapp"></i> +62 857-5178-7232
+            </a>
+          </li>
+          <li>
+            <a href="mailto:fazticket@gmail.com">
+              <i class="bi bi-envelope"></i> fazticket@gmail.com
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="bi bi-geo-alt"></i> Mojokerto, Jawa Timur
+            </a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <hr class="footer-line" />
+    <p class="footer-copy">© 2026 FazTicket.</p>
+
+  </div>
+</footer>
+
+<button id="toTop" title="Kembali ke atas">
+  <i class="bi bi-chevron-up"></i>
+</button>
+
+<script src="script.js"></script>
+<!--tanggal-->
+<script>
+  const dateInput = document.getElementById('date');
+  if (dateInput) {
+    const today = new Date().toISOString().split('T')[0];
+    dateInput.min = today;}
+</script>
+</body>
+</html>

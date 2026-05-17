@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kontak — FazTicket</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="container">
+    <a href="index.html" class="logo">
+      <span class="logo-icon"><i class="bi bi-triangle-half"></i></span>
+      FazTicket
+    </a>
+    <button id="navToggle" class="nav-toggle" aria-label="Menu">
+      <i class="bi bi-list"></i>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Beranda</a></li>
+      <li><a href="index.html#gunung">Info Gunung</a></li>
+      <li><a href="index.html#cuaca">Cuaca</a></li>
+      <li><a href="index.html#statistik">Statistik</a></li>
+      <li><a href="booking.html">Booking</a></li>
+      <li><a href="contact.html" class="active">Kontak</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- page header -->
+<div style="background:var(--bluee);padding:100px 0 52px;text-align:center;color:#fff;">
+  <div class="container">
+    <i class="bi bi-headset" style="font-size:2.4rem;color:#7ab8ff;display:block;margin-bottom:12px;"></i>
+    <h1 style="font-size:2rem;font-weight:800;margin-bottom:8px;">Hubungi Kami</h1>
+    <p style="opacity:.72;font-size:.95rem;">Ada pertanyaan? Kami siap membantu kamu</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="contact-wrap">
+
+      <!-- info cards -->
+      <div class="contact-info reveal">
+        <div class="cinfo-card">
+          <div class="cinfo-icon"><i class="bi bi-whatsapp"></i></div>
+          <div>
+            <div class="cinfo-label">WhatsApp</div>
+            <a href="https://wa.me/6285751787232" target="_blank" class="cinfo-val">+62 857-5178-7232</a>
+            <div class="cinfo-sub">Respon dalam 1×24 jam</div>
+          </div>
+        </div>
+        <div class="cinfo-card">
+          <div class="cinfo-icon"><i class="bi bi-envelope-fill"></i></div>
+          <div>
+            <div class="cinfo-label">Email</div>
+            <a href="mailto:fazticket@gmail.com" class="cinfo-val">fazticket@gmail.com</a>
+            <div class="cinfo-sub">Untuk pertanyaan formal</div>
+          </div>
+        </div>
+        <div class="cinfo-card">
+          <div class="cinfo-icon"><i class="bi bi-instagram"></i></div>
+          <div>
+            <div class="cinfo-label">Instagram</div>
+            <a href="https://instagram.com/arcstriaa" target="_blank" class="cinfo-val">@arcstriaa</a>
+            <div class="cinfo-sub">Update & info terbaru</div>
+          </div>
+        </div>
+        <div class="cinfo-card">
+          <div class="cinfo-icon"><i class="bi bi-geo-alt-fill"></i></div>
+          <div>
+            <div class="cinfo-label">Lokasi</div>
+            <span class="cinfo-val">Mojokerto, Jawa Timur</span>
+            <div class="cinfo-sub">Basecamp operasional</div>
+          </div>
+        </div>
+
+        <!-- jam operasional -->
+        <div style="background:var(--sky);border:1px solid var(--border);border-radius:var(--radius);padding:20px 22px;margin-top:4px;">
+          <div style="font-weight:700;color:var(--blue);font-size:.9rem;margin-bottom:12px;">
+            <i class="bi bi-clock-fill"></i> Jam Operasional
+          </div>
+          <div style="display:flex;flex-direction:column;gap:7px;font-size:.85rem;color:var(--muted);">
+            <div style="display:flex;justify-content:space-between;">
+              <span>Senin – Jumat</span><strong style="color:var(--blue);">08.00 – 21.00</strong>
+            </div>
+            <div style="display:flex;justify-content:space-between;">
+              <span>Sabtu – Minggu</span><strong style="color:var(--blue);">07.00 – 22.00</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- form pesan -->
+      <div class="booking-card reveal">
+        <div class="booking-head">
+          <h2><i class="bi bi-chat-dots"></i> Kirim Pesan</h2>
+          <p>Isi form dan kami akan balas via WhatsApp atau Email</p>
+        </div>
+        <div class="booking-body">
+          <div class="form-group">
+            <label for="cName"><i class="bi bi-person"></i> Nama Lengkap</label>
+            <input type="text" id="cName" placeholder="Nama kamu" />
+          </div>
+          <div class="form-group">
+            <label for="cPhone"><i class="bi bi-whatsapp"></i> Nomor WhatsApp</label>
+            <input type="tel" id="cPhone" placeholder="08xxxxxxxxxx" />
+          </div>
+          <div class="form-group">
+            <label for="cTopic"><i class="bi bi-tag"></i> Topik</label>
+            <select id="cTopic">
+              <option value="">-- Pilih Topik --</option>
+              <option>Pertanyaan Booking</option>
+              <option>Info Pendakian</option>
+              <option>Keluhan / Saran</option>
+              <option>Kerja Sama</option>
+              <option>Lainnya</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="cMsg"><i class="bi bi-pencil"></i> Pesan</label>
+            <textarea id="cMsg" rows="4" placeholder="Tulis pesanmu di sini..."></textarea>
+          </div>
+          <button class="btn btn-book" id="sendContactBtn">
+            <i class="bi bi-whatsapp"></i> Kirim via WhatsApp
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <span class="logo-icon"><i class="bi bi-triangle-half"></i></span>FazTicket
+        </div>
+        <p class="footer-about">Platform pemesanan tiket pendakian gunung di Mojokerto, Jawa Timur. Mudah, cepat, dan terpercaya.</p>
+        <div class="footer-socials">
+          <a href="https://instagram.com/arcstriaa" title="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="#" title="TikTok"><i class="bi bi-tiktok"></i></a>
+          <a href="#" title="YouTube"><i class="bi bi-youtube"></i></a>
+          <a href="https://wa.me/6285751787232" target="_blank" title="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+        </div>
+      </div>
+      <div>
+        <h5>Navigasi</h5>
+        <ul class="footer-links">
+          <li><a href="index.html">Beranda</a></li>
+          <li><a href="index.html#gunung">Info Gunung</a></li>
+          <li><a href="index.html#cuaca">Cuaca</a></li>
+          <li><a href="index.html#statistik">Statistik</a></li>
+          <li><a href="booking.html">Booking Tiket</a></li>
+          <li><a href="contact.html">Kontak</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Kontak</h5>
+        <ul class="footer-links">
+          <li><a href="https://wa.me/6285751787232" target="_blank"><i class="bi bi-whatsapp"></i> +62 857-5178-7232</a></li>
+          <li><a href="mailto:fazticket@gmail.com"><i class="bi bi-envelope"></i> fazticket@gmail.com</a></li>
+          <li><a href="#"><i class="bi bi-geo-alt"></i> Mojokerto, Jawa Timur</a></li>
+        </ul>
+      </div>
+    </div>
+    <hr class="footer-line" />
+    <p class="footer-copy">© 2026 FazTicket.</p>
+  </div>
+</footer>
+
+<button id="toTop" title="Kembali ke atas"><i class="bi bi-chevron-up"></i></button>
+
+<script src="script.js"></script>
+<script>
+  document.getElementById('sendContactBtn').addEventListener('click', function() {
+    const name  = document.getElementById('cName').value.trim();
+    const phone = document.getElementById('cPhone').value.trim();
+    const topic = document.getElementById('cTopic').value || 'Umum';
+    const msg   = document.getElementById('cMsg').value.trim();
+    if (!name || !phone || !msg) { alert('Harap lengkapi nama, nomor, dan pesan.'); return; }
+    const text = `Halo FazTicket!\n\nNama  : ${name}\nWA    : ${phone}\nTopik : ${topic}\n\n${msg}`;
+    window.open(`https://wa.me/6285751787232?text=${encodeURIComponent(text)}`, '_blank');
+  });
+</script>
+</body>
+</html>
