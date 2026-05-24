@@ -10,6 +10,7 @@
   --shadow: 0 4px 18px rgba(10, 37, 64, 0.1);
   --radius: 12px;
 }
+
 /* reset */
 *,
 *::before,
@@ -18,6 +19,7 @@
   margin: 0;
   padding: 0;
 }
+
 html {
   scroll-behavior: smooth;
 }
@@ -51,7 +53,6 @@ ul {
 .section-alt {
   background: var(--sky);
 }
-
 .section-head {
   text-align: center;
   margin-bottom: 48px;
@@ -72,7 +73,6 @@ ul {
   border-radius: 2px;
   margin: 12px auto 0;
 }
-
 .btn {
   display: inline-flex;
   align-items: center;
@@ -123,7 +123,6 @@ ul {
   background: var(--blue);
   padding: 14px 0;
 }
-
 .navbar .container {
   display: flex;
   align-items: center;
@@ -169,6 +168,15 @@ ul {
   color: var(--white);
   background: rgba(255, 255, 255, 0.12);
 }
+
+.nav-links a.logout-link {
+  color: rgba(255, 255, 255, 0.92);
+  background: rgba(255, 255, 255, 0.06);
+}
+.nav-links a.logout-link:hover {
+  background: rgba(255, 255, 255, 0.18);
+}
+
 .nav-toggle {
   display: none;
   background: none;
@@ -252,7 +260,6 @@ ul {
   transform: translateY(-6px);
   box-shadow: 0 10px 30px rgba(10, 37, 64, 0.15);
 }
-
 .card-img {
   height: 200px;
   overflow: hidden;
@@ -302,6 +309,7 @@ ul {
 .card-meta i {
   margin-right: 3px;
 }
+
 /* cuaca */
 .weather-grid {
   display: grid;
@@ -355,6 +363,7 @@ ul {
   color: var(--blue);
   font-size: 0.88rem;
 }
+
 /* statistik */
 .chart-wrap {
   background: var(--white);
@@ -407,7 +416,6 @@ ul {
 .booking-body {
   padding: 32px;
 }
-
 .form-group {
   margin-bottom: 20px;
 }
@@ -561,6 +569,10 @@ ul {
   background: #155bb5;
 }
 
+.hero-bg {
+  background: url("https://images6.alphacoders.com/378/thumb-1920-378352.jpg") center/cover no-repeat;
+}
+
 /* kontak */
 .contact-wrap {
   display: grid;
@@ -584,36 +596,58 @@ ul {
   border-radius: var(--radius);
   padding: 18px 20px;
   box-shadow: var(--shadow);
-  transition: .2s;
+  transition: 0.2s;
 }
-.cinfo-card:hover { transform: translateY(-3px); }
+.cinfo-card:hover {
+  transform: translateY(-3px);
+}
 .cinfo-icon {
-  width: 42px; height: 42px;
+  width: 42px;
+  height: 42px;
   background: var(--sky);
   border-radius: 10px;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 1.15rem; color: var(--blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.15rem;
+  color: var(--blue);
   flex-shrink: 0;
 }
-.cinfo-label { font-size: .75rem; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 2px; }
-.cinfo-val { font-size: .93rem; font-weight: 600; color: var(--blue); display: block; }
-.cinfo-sub { font-size: .78rem; color: var(--muted); margin-top: 2px; }
+.cinfo-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 2px;
+}
+.cinfo-val {
+  font-size: 0.93rem;
+  font-weight: 600;
+  color: var(--blue);
+  display: block;
+}
+.cinfo-sub {
+  font-size: 0.78rem;
+  color: var(--muted);
+  margin-top: 2px;
+}
 .form-group textarea {
   width: 100%;
   padding: 11px 14px;
   border: 1.5px solid var(--border);
   border-radius: 9px;
   font-family: inherit;
-  font-size: .93rem;
+  font-size: 0.93rem;
   color: var(--text);
   background: #fafcff;
   outline: none;
-  transition: .2s;
+  transition: 0.2s;
   resize: vertical;
 }
 .form-group textarea:focus {
   border-color: var(--blue);
-  box-shadow: 0 0 0 3px rgba(26,107,204,.12);
+  box-shadow: 0 0 0 3px rgba(26, 107, 204, 0.12);
 }
 
 /* responsif */
