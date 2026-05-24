@@ -178,5 +178,20 @@
     window.open(`https://wa.me/6285751787232?text=${encodeURIComponent(text)}`, '_blank');
   });
 </script>
+  <script>
+      (function () {
+        try {
+          const logged =
+            localStorage.getItem('faz_logged') ||
+            sessionStorage.getItem('faz_logged');
+
+          if (!logged) {
+            window.location.replace('login.html');
+          }
+        } catch (e) {
+          window.location.replace('login.html');
+        }
+      })();
+    </script>
 </body>
 </html>
