@@ -7,7 +7,6 @@ if (navToggle) {
     navLinks.classList.toggle("open");
   });
 }
-//memeriksa nama file
 const page = window.location.pathname.split("/").pop() || "index.html";
 document.querySelectorAll(".nav-links a").forEach((link) => {
   if (link.getAttribute("href") === page) link.classList.add("active");
@@ -35,33 +34,26 @@ const revealObs = new IntersectionObserver(
 );
 revealEls.forEach((el) => revealObs.observe(el));
 
-//booking form
 const bookingForm = document.getElementById("bookingForm");
 
 if (bookingForm) {
   bookingForm.addEventListener("submit", function (e) {
     e.preventDefault();
-    //nilai value
     const name = document.getElementById("name").value.trim();
     const phone = document.getElementById("phone").value.trim();
     const mountain = document.getElementById("mountain").value;
     const date = document.getElementById("date").value;
     const climbers = document.getElementById("climbers").value;
-
-    //check
     if (!name || !phone || !mountain || !date || !climbers) {
       alert("Harap lengkapi semua data terlebih dahulu.");
       return;
     }
-    //format tgl
     const dateObj = new Date(date);
     const formatted = dateObj.toLocaleDateString("id-ID", {
       day: "numeric",
       month: "long",
       year: "numeric",
     });
-
-    //pesan wa
     const message =
       `Halo FazTicket! \n\n` +
       `Saya ingin memesan tiket pendakian:\n` +
@@ -71,9 +63,7 @@ if (bookingForm) {
       `Tanggal   : ${formatted}\n` +
       `Peserta   : ${climbers} orang\n\n` +
       `Mohon konfirmasi pemesanan saya. Terima kasih! `;
-
     const waNumber = "6285751787232";
-
     window.open(
       `https://wa.me/${waNumber}?text=${encodeURIComponent(message)}`,
       "_blank",
@@ -81,9 +71,7 @@ if (bookingForm) {
     bookingForm.reset();
   });
 }
-//statistik bulan
 const chartCanvas = document.getElementById("visitorChart");
-
 if (chartCanvas) {
   new Chart(chartCanvas, {
     type: "bar",
