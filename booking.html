@@ -12,8 +12,6 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-<!--navbar-->
 <nav class="navbar">
   <div class="container">
     <a href="index.html" class="logo">
@@ -22,7 +20,6 @@
     <button id="navToggle" class="nav-toggle" aria-label="Menu">
       <i class="bi bi-list"></i>
     </button>
-
     <ul class="nav-links" id="navLinks">
       <li><a href="index.html">Beranda</a></li>
       <li><a href="index.html#gunung">Info Gunung</a></li>
@@ -30,11 +27,10 @@
       <li><a href="index.html#statistik">Statistik</a></li>
       <li><a href="booking.html" class="active">Booking</a></li>
       <li><a href="contact.html">Kontak</a></li>
+      <li><a href="#" id="logoutLink" class="logout-link" aria-label="Log out"><i class="bi bi-box-arrow-right"></i> Log out</a></li>
     </ul>
-
   </div>
 </nav>
-
 <div style="
   background: var(--bluee);
   padding: 100px 0 52px;
@@ -161,7 +157,6 @@
           <i class="bi bi-lightbulb-fill" style="color:#000000;"></i>
           Tips Sebelum Mendaki
         </h4>
-        <!--tips-->
         <ul style="list-style:none; display:flex; flex-direction:column; gap:10px;">
           <li style="display:flex; gap:10px; align-items:flex-start; font-size:.88rem; color:var(--muted);">
             <i class="bi bi-check-circle-fill" style="color:var(--blue); margin-top:2px; flex-shrink:0;"></i>
@@ -184,11 +179,9 @@
     </div>
   </div>
 </section>
-
 <footer class="footer">
   <div class="container">
     <div class="footer-grid">
-
       <div>
         <div class="footer-brand">
           <span class="logo-icon"><i class="bi bi-triangle-half"></i></span>
@@ -239,21 +232,15 @@
           </li>
         </ul>
       </div>
-
     </div>
-
     <hr class="footer-line" />
     <p class="footer-copy">© 2026 FazTicket.</p>
-
   </div>
 </footer>
-
 <button id="toTop" title="Kembali ke atas">
   <i class="bi bi-chevron-up"></i>
 </button>
-
 <script src="script.js"></script>
-<!--tanggal-->
 <script>
   const dateInput = document.getElementById('date');
   if (dateInput) {
