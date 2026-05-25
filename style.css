@@ -141,13 +141,14 @@ ul {
 .logo-icon {
   width: 34px;
   height: 34px;
-  background: var(--blue);
+  background: transparent;
   border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.05rem;
 }
+
 
 /* nav link */
 .nav-links {
@@ -480,8 +481,9 @@ ul {
   margin-bottom: 12px;
 }
 .footer-brand .logo-icon {
-  background: var(--blue);
+  background: transparent;
 }
+
 .footer-about {
   font-size: 0.85rem;
   line-height: 1.8;
